@@ -1,4 +1,5 @@
 const express = require('express');
+const db = require('./config/connection')
 const mongoose = require('mongoose');
 
 const app = express();
@@ -8,6 +9,13 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(express.static('public'));
 
-app.use(require('./routes'));
+// app.use(require('./routes'));
 
-// mongoose.connect(process.env.MONGODB_URI ||
+mongoose.set('debug', true)
+
+db.once('open', () => {
+    app.listen(PORT, () => {
+    console.log(`API server for running on port ${PORT}!`);
+    });
+});
+  
