@@ -1,5 +1,5 @@
 const {Schema, model } = require('mongoose');
-
+const dateFormat = require("../utils/dateHelper")
 
 const userSchema = new Schema(
     {
@@ -32,11 +32,12 @@ const userSchema = new Schema(
         toJSON:{
             getters: true,
             virtuals: true
-        }
+        },
+        id: false,
     }
 );
 
-userSchema.virtual('friends').get(function(){
+userSchema.virtual('friendsCount').get(function(){
     return this.friends.length;
 })
 
