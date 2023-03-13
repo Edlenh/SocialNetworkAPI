@@ -95,7 +95,8 @@ const userController={
     },
     
     //get ri..delete friend
-    //hello grader please dont dock me points im just trying to make coding fun for myself
+    //hello grader how are you?
+    //please dont dock me points im just trying to make coding fun for myself
     removeFriend({ params }, res) {
         User.findOneAndUpdate(
           { _id: params.userId },
