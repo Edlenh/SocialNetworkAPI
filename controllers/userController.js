@@ -51,12 +51,12 @@ const userController={
 
     //DELETE a user
     deleteUser(req,res){
-        User.findOne({_id: req.params.userId})
+        User.findOneAndDelete({_id: req.params.userId})
         .then((user)=>
         !user? res.status(404).json({message: 'Sorry User Not Found'})
         //thoughts related to that user should also be deleted. 
         //yknow? like reddit. sometimes you see 'deleted' comments on threads
-        : Thought.deleteMany({_id: { $in:user.thought }})
+        : Thought.deleteMany({_id: { $in:user.thoughts }})
         )
         .then(()=> res.json({message: 'User and related thoughts deleted!'}))
         .catch((err)=>res.status(500).json(err));
