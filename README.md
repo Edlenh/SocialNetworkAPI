@@ -9,6 +9,8 @@ Users are able to create users, make friendships, create thoughts and react to t
 
 ## Video
 link to video:
-
+https://drive.google.com/file/d/1jrP05sy00oODlPB5a6-FirTgZkKNeosi/view
+https://drive.google.com/file/d/1eExSRxUAkCrD4H0snYY39SCjykkclnzI/view
+https://drive.google.com/file/d/11pi35ZPuwapPwkgG4mHrnveNSKYzyAhh/view
 ##Github
 github.com/Edlenh
